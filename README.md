@@ -1,7 +1,3 @@
-ertainly! Below is a sample README file for your project. It includes instructions on how to set up, compile, and run the Java program.
-
----
-
 # UniqueInt
 
 ## Description
@@ -9,13 +5,12 @@ UniqueInt is a Java program that reads a list of integers from input files, filt
 
 ## Project Structure
 ```
-/dsa/hw01/
-  ├── code/
-  │   └── src/
-  │       └── UniqueInt.java
+/Ds/
+└── UniqueInt.java
+└── /hw01/
   ├── sample_inputs/
   │   └── sample_input_01.txt
-  │   └── sample_input_02.txt
+  │   └── ....
   └── sample_results/
 ```
 
@@ -44,55 +39,9 @@ UniqueInt is a Java program that reads a list of integers from input files, filt
 
 2. **Navigate to the source code directory:**
    ```bash
-   cd /dsa/hw01/code/src/
+   cd /Ds/
    ```
 
-3. **Ensure the source file is named `UniqueInt.java` and contains the following code:**
-   ```java
-   import java.io.*;
-   import java.nio.file.*;
-   import java.util.*;
-
-   public class UniqueInt {
-
-       public static void processFile(String inputFilePath, String outputFilePath) {
-           Set<Integer> uniqueIntegers = new TreeSet<>(); // TreeSet to keep sorted order
-
-           try (BufferedReader reader = Files.newBufferedReader(Paths.get(inputFilePath))) {
-               String line;
-               while ((line = reader.readLine()) != null) {
-                   line = line.trim();
-                   if (line.isEmpty()) {
-                       continue; // Skip empty lines
-                   }
-                   try {
-                       int number = Integer.parseInt(line);
-                       uniqueIntegers.add(number);
-                   } catch (NumberFormatException e) {
-                       // Ignore lines that are not valid integers
-                   }
-               }
-           } catch (IOException e) {
-               e.printStackTrace();
-           }
-
-           try (BufferedWriter writer = Files.newBufferedWriter(Paths.get(outputFilePath))) {
-               for (int number : uniqueIntegers) {
-                   writer.write(String.valueOf(number));
-                   writer.newLine();
-               }
-           } catch (IOException e) {
-               e.printStackTrace();
-           }
-       }
-
-       public static void main(String[] args) {
-           String inputDir = "/dsa/hw01/sample_inputs/";
-           String outputDir = "/dsa/hw01/sample_results/";
-
-           try {
-               Files.createDirectories(Paths.get(outputDir));
-               Files.li```
 
 ## Usage
 1. **Compile the Java program:**
@@ -134,5 +83,6 @@ UniqueInt is a Java program that reads a list of integers from input files, filt
 ## Notes
 - The program handles variations such as white spaces, empty lines, lines with multiple integers, and non-integer lines by skipping them.
 - Ensure the directory paths are correctly set up before running the program.
-
+## Developer
+-`Lina IRATWE`
 ---
