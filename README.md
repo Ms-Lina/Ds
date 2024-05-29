@@ -14,7 +14,7 @@ UniqueInt is a Java program that reads a list of integers from input files, filt
   └── sample_results/
 ```
 
-- `code/src/`: Contains the Java source code.
+- `hw01/`: Contains the Java source code.
 - `sample_inputs/`: Contains the input files with lists of integers.
 - `sample_results/`: This directory will be populated with output files containing unique, sorted integers.
 
